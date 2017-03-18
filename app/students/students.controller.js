@@ -5,27 +5,22 @@
 		.module('ngInterview.students')
 		.controller('StudentsController', StudentsController);
 
-	StudentsController.$inject = [];
-	function StudentsController() {
-
-		/**
-		 * Model
-		 */
-
+	StudentsController.$inject = ['$scope','StudentsService'];
+	function StudentsController($scope, StudentsService) {
+		//Initialization 
+		$scope.flagStudentList = false;
 		var vm = this;
 
-		/**
-		 * Initialization
-		 */
-
-		activate();
-
-		/**
-		 * Implementations
-		 */
-
-		function activate() {
+		$scope.activate = function() {
 			// Initialization code goes here
+			StudentsService.getStudentList().then(function(data){
+		        $scope.students = data;	
+		        $scope.flagStudentList = true;	
+		    }, function(error){
+		    	$scope.error = error;
+		    });
 		}
+
+		$scope.activate();
 	}
 })();

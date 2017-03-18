@@ -7,6 +7,7 @@ module.exports = function(config) {
 		files: [
 			'bower_components/angular/angular.js',
 			'**/*.module.js',
+			'**/*.service.js',
 			'**/*.js'
 		],
 
