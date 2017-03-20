@@ -14,11 +14,11 @@
 		$scope.activate = function() {
 			// Initialization code goes here
 			StudentsService.getStudentList().then(function(data){
-		        $scope.students = data;	
-		        $scope.flagStudentList = true;	
-		    }, function(error){
-		    	$scope.error = error;
-		    });
+        $scope.students = data;	
+        $scope.flagStudentList = true;	
+	    }, function(error){
+	    	$scope.error = error;
+	    });
 		}
 
 		$scope.activate();

@@ -1,20 +1,19 @@
 <div class="row">
-	<div class="col-lg-6">
-		<h2>Students</h2>
-
-		<div class="studentlist" ng-if="students">
-			<ul>
-				<li>Here are your students...</li>
-				<li ng-repeat="student in students">
-					<div class="list-group">
-					  	<a href="#" class="list-group-item active">
-						    <h4 class="list-group-item-heading">{{student.name}}</h4>
-						    <p class="list-group-item-text">{{student.class}}</p>
-					  	</a>
-					</div>
-				</li>
-			</ul>
-		</div>	
-		<div class="" ng-if="!vm.flagStudentList">{{error}}</div>
-	</div>
+  <div class="col-lg-6">
+    <h2>Students</h2>
+    <div class="studentlist" ng-if="students">
+      <ul>
+        <li>Here are your students...</li>
+        <li ng-repeat="student in students">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">{{student.name}}</h4>
+              <p class="list-group-item-text">{{student.class}}</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="" ng-if="!vm.flagStudentList">{{error}}</div>
+  </div>
 </div>
